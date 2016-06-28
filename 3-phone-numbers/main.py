@@ -4,13 +4,14 @@ from person import Person
 
 
 def open_csv(file_name):
-    # implent this function
-    pass  # delete this
+    with open(file_name, 'r') as phone_number:
+        phone_number = [line.split(",") for line in phone_number.readlines()]
+    return phone_number
 
 
 def get_csv_file_name(argv_list):
-    # implent this function
-    pass  # delete this
+    to_return = argv_list[1]  # might need to tell that it's a string
+    return to_return
 
 
 def format_output(person):
