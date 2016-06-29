@@ -5,8 +5,15 @@ from person import Person
 
 def open_csv(file_name):
     with open(file_name, 'r') as phone_number:
-        phone_number = [line.split(",") for line in phone_number.readlines()]
-    return phone_number
+        names_n_numbers = [line.split(",") for line in names_n_numbers.readlines()]
+        numbers = []
+        numbers = numbers.digits
+        for element in names_n_numbers:
+            for i in element[1]:
+
+        # get phone numbers from list elements
+        # remove every non-digit characters
+    return names_n_numbers
 
 
 def get_csv_file_name(argv_list):
@@ -20,8 +27,9 @@ def format_output(person):
 
 
 def get_person_by_phone_number(person_list, user_input_phone_number):
-    # implent this function
-    pass  # delete this
+    for element in person_list:
+        if user_input_phone_number == element[1]:
+            return element[0]
 
 
 def main():
